@@ -21,7 +21,7 @@ The homepage is the welcoming entry point.
 
 **Non-technical**  
 - Presents a clean, calming design to encourage a positive first impression.  
-- Highlights core features such as mood tracking, insights, and personalized dashboard.  
+- Highlights core features such as mood tracking, insights and personalized dashboard.  
 - Provides quick navigation to signup/login and information sections.
 
 **Technical**  
@@ -30,14 +30,15 @@ The homepage is the welcoming entry point.
 - Uses React Router for seamless navigation without page reloads.
 
 
-`![Homepage](screenshots/homepage1.png)`
+
+![Homepage](screenshots/home1.png)
 
 
 ---
 
 ## ℹ️ About Us Page
 **Non-technical**  
-- Shares the story, mission, and team behind Mindspace.  
+- Shares the story, mission and team behind Mindspace.  
 - Builds trust and explains the purpose of the application.
 
 **Technical**  
@@ -45,23 +46,25 @@ The homepage is the welcoming entry point.
 - Responsive grid layout ensures readability on all devices.  
 - No backend calls, enabling quick load times.
 
-_Add screenshot here_  
-`![About Us](screenshots/aboutus.png)`
+
+
+![About Us](screenshots/aboutus.png)
 
 ---
 
 ## 📞 Contact Us Page
 **Non-technical**  
 - Provides a simple form for users to send feedback or questions.  
-- Includes location or email links for direct communication.
+- Includes email links for direct communication.
 
 **Technical**  
 - React form with controlled components for real-time validation.  
-- POSTs data to a Spring Boot endpoint that sends emails (via SMTP) or stores messages in a database.  
+- POSTs data to a Spring Boot endpoint that stores messages in a database.  
 - Form input is sanitized and validated on both client and server.
 
-_Add screenshot here_  
-`![Contact Us](screenshots/contactus.png)`
+
+
+![Contact Us](screenshots/contactus.png)
 
 ---
 
@@ -76,23 +79,32 @@ _Add screenshot here_
 - Passwords are hashed using Spring Security’s `BCryptPasswordEncoder`.  
 - Includes client-side validation and protected routes.
 
-_Add screenshot here_  
-`![Signup/Login](screenshots/signup-login.png)`
+
+
+![Signup](screenshots/signup.png)
+
+
+![Login](screenshots/login.png)
+
 
 ---
 
 ## 📊 Dashboard Page
 **Non-technical**  
 - Personalized hub showing a summary of user activity and quick links to key features.  
-- Displays daily mood logs, quick insights, and motivational content.
+- Displays daily mood logs, quick insights and motivational content.
 
 **Technical**  
-- React dashboard uses reusable components and charts (e.g., Chart.js/Recharts).  
+- React dashboard uses reusable components and charts (e.g., Chart.js).  
 - Fetches user-specific data via authenticated REST calls.  
 - Implements lazy loading to optimize performance.
 
-_Add screenshot here_  
-`![Dashboard](screenshots/dashboard.png)`
+
+
+![Dashboard](screenshots/dashboard1.png)
+
+
+![Dashboard](screenshots/dashboard2.png)
 
 ---
 
@@ -103,46 +115,47 @@ _Add screenshot here_
 
 **Technical**  
 - Interactive forms and dynamic data visualization (e.g., line/bar charts).  
-- Backend stores mood entries in a relational database (MySQL/PostgreSQL).  
-- Insights generated using simple analytics (average mood score, streaks).  
+- Backend stores mood entries in a relational database (MySQL).  
+- Insights generated using simple analytics (average mood score).  
 - Protected route ensures only authenticated users can access their data.
 
-_Add screenshot here_  
-`![Mood Insights](screenshots/moodinsights.png)`
+
+
+![Mood Insights](screenshots/moodinsights1.png)
+
+![Mood Insights](screenshots/moodinsights2.png)
 
 ---
 
 ## 🛠️ Tech Stack
-- **Frontend**: React, Tailwind CSS, Axios, React Router  
+- **Frontend**: React, CSS, Axios, React Router  
 - **Backend**: Spring Boot, Spring Security, JPA/Hibernate  
-- **Database**: MySQL  
-- **Deployment**: Docker, GitHub Actions (optional CI/CD)  
+- **Database**: MySQL   
 
 ---
 
 ## 🚀 Getting Started
 ### Prerequisites
 - Node.js ≥ 18  
-- Java ≥ 17  
-- Docker (optional for containerized deployment)  
+- Java ≥ 17   
 - MySQL server
 
 ### Setup
 1. Clone the repo  
    ```bash
-   git clone https://github.com/yourusername/mindspace.git
+   git clone https://github.com/shruti0731/mindspace.git
    cd mindspace
    ```
 
 2. **Backend**  
    ```bash
-   cd backend
+   cd api
    mvn spring-boot:run
    ```
 
 3. **Frontend**  
    ```bash
-   cd frontend
+   cd mlogin
    npm install
    npm start
    ```
@@ -152,12 +165,50 @@ _Add screenshot here_
 ---
 
 ## 📸 Screenshots
-Replace each placeholder in the sections above with your actual screenshots, for example:
-```
-![Homepage](screenshots/homepage.png)
-```
+
+**- Dashboard**
+
+![Dashboard](screenshots/dashboard1.png)
 
 ---
 
-## 📜 License
-This project is licensed under the MIT License – see [LICENSE](LICENSE) for details.
+
+![Dashboard](screenshots/dashboard2.png)
+
+---
+
+**- Profile**
+  
+![Profile](screenshots/profile.png)
+
+---
+
+**- Apply search filters by date, mood, content,etc.**
+  
+![search_filters](screenshots/searchfilters.png)
+
+---
+
+**- Resource Recommendations**
+
+![Resource](screenshots/res_recommendation1.png)
+
+---
+
+![Resource](screenshots/res_recommendation2.png)
+
+---
+
+**- Mood insights**
+
+![Moodinsights](screenshots/moodinsights1.png)
+
+---
+
+![Moodinsights](screenshots/moodinsights2.png)
+
+
+---
+
+## Author
+Shruti Chavan.
