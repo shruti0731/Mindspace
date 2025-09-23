@@ -1,0 +1,126 @@
+/* DASHBOARD CONTAINER */
+.dashboard-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  box-sizing: border-box;
+}
+
+/* HEADER */
+.dashboard-header {
+  width: 100%;
+  padding: 20px;
+  background: linear-gradient(135deg, #93c5fd, #e9d5ff);
+  border-radius: 16px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  text-align: center;
+}
+
+.app-title {
+  font-size: clamp(26px, 6vw, 52px);
+  font-family: 'Pacifico', cursive;
+  background: linear-gradient(to right, #f97316, #ec4899, #8b5cf6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 0 0 8px;
+}
+
+.mindspace-content {
+  max-width: 800px;
+  font-size: clamp(14px, 3vw, 18px);
+  color: #444;
+  line-height: 1.6;
+  font-family: 'Poppins', sans-serif;
+  margin: 0 auto;
+  opacity: 0.9;
+}
+
+/* SECTIONS / CARDS */
+.mood-section,
+.journal-section,
+.previous-journals,
+.journal-card {
+  width: 100%;
+  max-width: 100%;   /* ✅ no fixed 800/900px */
+  margin: 0 auto 20px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+/* TEXTAREAS */
+.journal-section textarea,
+.journal-section-textarea-prev {
+  width: 100%;
+  min-height: 120px;
+  padding: 14px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  resize: none;
+  font-size: 15px;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 18px;
+  box-sizing: border-box;
+}
+
+/* BUTTONS */
+.journal-section button,
+.dropdown-btn,
+.journal-actions-button button {
+  width: 100%;   /* ✅ full width on small screens */
+  max-width: 250px;
+  margin: 0 auto;
+  background: linear-gradient(135deg, #8b5cf6, #ec4899);
+  padding: 12px 24px;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: block;
+}
+
+.journal-section button:hover,
+.dropdown-btn:hover,
+.journal-actions-button button:hover {
+  background: linear-gradient(135deg, #7c3aed, #db2777);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* CHART FIX */
+.full-graph-container {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;   /* ✅ prevents cut-off */
+  margin: 0 auto;
+}
+
+.full-graph-container canvas,
+.full-graph-container svg {
+  width: 100% !important;  /* ✅ force chart to scale */
+  height: auto !important;
+}
+
+/* RESPONSIVE TUNING */
+@media (min-width: 768px) {
+  .dashboard-container {
+    padding: 24px;
+    gap: 30px;
+  }
+
+  .journal-section button,
+  .dropdown-btn,
+  .journal-actions-button button {
+    width: auto;
+  }
+}

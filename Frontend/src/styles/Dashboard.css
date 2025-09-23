@@ -1,0 +1,133 @@
+/* ======= Base Reset ======= */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body, #root {
+  height: 100%;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #f9a8d4, #a78bfa, #60a5fa);
+  min-height: 100vh;
+}
+
+/* ======= Layout ======= */
+.dashboard-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 32px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* ======= Header ======= */
+.dashboard-header {
+  padding: 20px;
+  border-radius: 16px;
+  background: rgba(255,255,255,0.25);
+  backdrop-filter: blur(6px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.app-title {
+  font-size: 40px;
+  font-weight: 800;
+  font-family: "Pacifico", cursive;
+  background: linear-gradient(90deg, #f97316, #ec4899, #8b5cf6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.profile-section {
+  position: absolute;
+  right: 20px;
+}
+.profile-icon { color: #6a1b9a; cursor: pointer; }
+
+/* ======= Card style (shared by all sections) ======= */
+.card {
+  background: rgba(255,255,255,0.95);
+  border-radius: 14px;
+  padding: 20px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+.card h2, .card h3, .card label {
+  margin-bottom: 12px;
+  color: #5b2f8a;
+}
+
+/* ======= Filters ======= */
+.filter-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.filter-section input,
+.filter-section select {
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  flex: 1 1 200px;
+}
+.filter-section button {
+  padding: 10px 16px;
+}
+
+/* ======= Mood & Journal ======= */
+.mood-section select,
+.journal-section textarea {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+.journal-section textarea { min-height: 100px; resize: vertical; }
+
+/* ======= Journals ======= */
+.previous-journals .journal-card {
+  margin-bottom: 16px;
+  background: #fff;
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* ======= Recommendations ======= */
+.recommendations-section ul {
+  list-style: none;
+  padding-left: 0;
+}
+.recommendations-section li {
+  background: #fff;
+  padding: 10px 14px;
+  margin: 8px 0;
+  border-radius: 8px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.06);
+}
+.recommendations-section a {
+  color: #6a1b9a;
+  font-weight: 600;
+  text-decoration: none;
+}
+.recommendations-section a:hover { text-decoration: underline; }
+
+/* ======= Buttons ======= */
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: 0.2s;
+}
+button:hover { opacity: 0.9; }
+button:not(.logout) {
+  background: linear-gradient(135deg, #8b5cf6, #ec4899);
+  color: #fff;
+}
+button.logout { background: #ef4444; color: #fff; }
+
+/* ======= Responsive ======= */
+@media (max-width: 768px) {
+  .app-title { font-size: 28px; }
+  .filter-section { flex-direction: column; }
+  .filter-section input, .filter-section select { flex: 1 1 100%; }
+}

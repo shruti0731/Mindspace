@@ -1,0 +1,131 @@
+.home-container {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom right, #f0c784, #f079d7); /* Softer main BG */
+  min-height: 100vh;
+  color: #2d2d2d;
+  padding: 60px 20px;
+  animation: fadeInPage 1s ease;
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.hero-title {
+  font-size: 48px;
+  font-weight: 800;
+  color: #5b21b6;
+  background: linear-gradient(90deg, #667eea, #764ba2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 20px;
+}
+
+.hero-subtitle {
+  font-size: 20px;
+  margin-bottom: 30px;
+  color: #444;
+  opacity: 0.9;
+}
+
+.cta-button {
+  padding: 15px 30px;
+  font-size: 16px;
+  background: linear-gradient(to right, #667eea, #764ba2);
+  color: white;
+  border: none;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(118, 74, 162, 0.3);
+}
+
+.features {
+  text-align: center;
+  margin: 60px auto;
+  max-width: 1000px;
+}
+
+.features h2 {
+  font-size: 36px;
+  color: #5b21b6;
+  margin-bottom: 40px;
+}
+
+.features-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.feature-card {
+  border-radius: 20px;
+  padding: 30px;
+  width: 280px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: #333;
+}
+
+/* Soft card backgrounds */
+.card-1 {
+  background: #f9f1ff; /* Soft lilac */
+}
+.card-2 {
+  background: #e5f0ff; /* Soft sky blue */
+}
+.card-3 {
+  background: #fef5e7; /* Soft peach */
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.15);
+}
+
+.feature-card h3 {
+  color: #5b21b6;
+  margin-bottom: 12px;
+  font-size: 20px;
+}
+
+.feature-card p {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.5;
+}
+
+@keyframes fadeInPage {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .features-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-title {
+    font-size: 36px;
+  }
+
+  .features h2 {
+    font-size: 28px;
+  }
+}
