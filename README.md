@@ -150,6 +150,7 @@ The homepage is the welcoming entry point.
 2. **Backend**  
    ```bash
    cd api
+   cd api
    mvn spring-boot:run
    ```
 
